@@ -1,0 +1,5 @@
+alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias ll='ls -lah'
+alias cpf='copyfile'
+alias cpp='copypath'
+alias cpb='copybuffer'

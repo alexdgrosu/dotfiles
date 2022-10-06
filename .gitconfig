@@ -1,0 +1,33 @@
+# This is Git's per-user configuration file.
+[user]
+    name = Alexandru Doru Grosu
+    email = alexandru.d.grosu@gmail.com
+[alias]
+    sts = status
+    cm = commit -m 
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --graph
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate -n 10
+    dcf = diff --name-only --diff-filter=U
+    ds = diff --staged
+    dc = diff --cached
+    co = checkout
+    amn = commit --amend --no-edit
+    fo = fetch origin
+    po = push origin
+    alias = config --get-regexp ^alias\\.\n
+[color]
+    ui = auto
+    branch = auto   
+    status = auto
+[core]
+    editor = code --wait
+[fetch]
+    prune = true
+[merge]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+[init]
+    defaultBranch = main
