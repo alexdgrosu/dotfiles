@@ -1,5 +1,27 @@
 alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias ll='ls -lah'
+
 alias cpf='copyfile'
 alias cpp='copypath'
 alias cpb='copybuffer'
+
+alias gs='git status'
+alias gss='git status --short'
+alias gcm='git commit -m'
+alias gls='git log --pretty=format:"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn]" --decorate --graph'
+alias gll='git log --pretty=format:"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn]" --decorate -n 10'
+alias gfo='git fetch origin'
+alias gpo='git push origin'
+alias gd='git diff'
+alias gco='git checkout'
+alias gamn='git commit --amend --no-edit'
+
+alias c='clip.exe'
+alias npp='/c/Program\ Files/Notepad++/notepad++.exe -multiInst -nosession'
+
+function terraform {
+  if [[ -f ./terraform ]]; then
+    ./terraform $@
+  else
+    command terraform $@
+  fi
+}

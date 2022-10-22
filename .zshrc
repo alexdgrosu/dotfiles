@@ -1,3 +1,5 @@
+path+=~/.local/bin
+
 [ -f ${ZDOTDIR-${HOME}}/.zaliases ] && source ${ZDOTDIR-${HOME}}/.zaliases
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -11,6 +13,10 @@ HISTFILE=~/.histfile
 HISTSIZE=12000
 SAVEHIST=10000
 
+unset tmp
+unset temp
+
+setopt hist_ignore_space
 setopt autocd
 setopt promptsubst
 unsetopt beep
@@ -19,6 +25,8 @@ unsetopt correct
 bindkey -e
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+bindkey "^[m" copy-prev-shell-word
+
 
 if [[ ! -f ${ZDOTDIR:-${HOME}}/.zcomet/bin/zcomet.zsh ]]; then
   command git clone https://github.com/agkozak/zcomet.git ${ZDOTDIR:-${HOME}}/.zcomet/bin
@@ -30,6 +38,7 @@ zcomet load romkatv/powerlevel10k
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+DISABLE_MAGIC_FUNCTIONS=true
 zcomet load ohmyzsh oh-my-zsh.sh
 zcomet load zdharma-continuum/fast-syntax-highlighting
 zcomet load ohmyzsh plugins/gitfast
@@ -40,6 +49,7 @@ zcomet load zsh-users/zsh-completions
 zcomet load ohmyzsh plugins/copyfile
 zcomet load ohmyzsh plugins/copybuffer
 zcomet load ohmyzsh plugins/copypath
+zcomet load ohmyzsh plugins/terraform
 
 zcomet load agkozak/zsh-z
 zcomet load junegunn/fzf shell completion.zsh key-bindings.zsh
