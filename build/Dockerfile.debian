@@ -1,0 +1,14 @@
+FROM debian:12
+ARG DEFAULT_SHELL
+ARG DEFAULT_USER
+ARG DEFAULT_PASSWORD
+ARG BASE_PACKAGES
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y ${DEFAULT_SHELL} ${BASE_PACKAGES}
+RUN useradd -m -s $(which ${DEFAULT_SHELL}) -G sudo ${DEFAULT_USER} \
+ && echo "[user]\ndefault=${DEFAULT_USER}" >> /etc/wsl.conf \
+ && echo "${DEFAULT_USER}:${DEFAULT_PASSWORD}" | chpasswd
+
+USER ${DEFAULT_USER}
+RUN echo "# Created by Dockerfile on behalf of ${DEFAULT_USER}" > ~/.zshrc
