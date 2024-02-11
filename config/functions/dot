@@ -1,0 +1,7 @@
+#/bin/zsh
+
+if [[  -f "/.dockerenv" ]]; then
+    ~dot/install -q
+else
+    (cd ~dot && git pull --ff-only && ./install -q)
+fi

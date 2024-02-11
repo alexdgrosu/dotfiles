@@ -20,6 +20,7 @@
 
 - link:
     ${HOME}/.zshenv:
+    ${HOME}/.tool-versions: config/asdf/tool-versions
 
 - link:
     ${ZDOTDIR}/.zshrc: config/zsh/zshrc
@@ -27,3 +28,28 @@
       glob: true
       path: config/zsh/*.d
     
+- link:
+    ${XDG_CONFIG_HOME}/asdf/.asdfrc: config/asdf/asdfrc
+    ${XDG_CONFIG_HOME}/functions:
+      glob: true
+      path: config/functions/*
+
+- defaults:
+    shell:
+      stdin: true
+      stdout: true
+      stderr: true
+
+- git:
+    "~/.asdf":
+      url: https://github.com/asdf-vm/asdf.git
+      branch: v0.14.0
+      description: asdf-vm
+      method: clone
+
+- asdf:
+    - asdf_path: "${ASDF_DIR}/asdf.sh"
+    - plugin: starship
+
+- shell:
+    - ${ASDF_DIR:-${HOME}.asdf}/bin/asdf install
