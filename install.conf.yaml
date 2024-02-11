@@ -33,6 +33,9 @@
     ${XDG_CONFIG_HOME}/functions:
       glob: true
       path: config/functions/*
+    ${XDG_CONFIG_HOME}/starship:
+      glob: true
+      path: config/starship/*
 
 - defaults:
     shell:
@@ -50,6 +53,7 @@
 - asdf:
     - asdf_path: "${ASDF_DIR}/asdf.sh"
     - plugin: starship
+    - plugin: fzf
 
 - shell:
     - ${ASDF_DIR:-${HOME}.asdf}/bin/asdf install
