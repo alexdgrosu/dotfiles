@@ -15,3 +15,7 @@
 
 - link:
     ${ZDOTDIR}/.zshrc: config/zsh/zshrc
+    ${ZDOTDIR}:
+      glob: true
+      path: config/zsh/*.d
+    
