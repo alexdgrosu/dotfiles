@@ -20,6 +20,7 @@
 
 - link:
     ${HOME}/.zshenv:
+    ${HOME}/.gitconfig: config/git/gitconfig
     ${HOME}/.tool-versions: config/asdf/tool-versions
 
 - link:
@@ -34,6 +35,9 @@
     ${XDG_CONFIG_HOME}/functions:
       glob: true
       path: config/functions/*
+    ${XDG_CONFIG_HOME}/git:
+      glob: true
+      path: config/git/*
     ${XDG_CONFIG_HOME}/starship:
       glob: true
       path: config/starship/*
@@ -63,6 +67,7 @@
     - plugin: eza
     - plugin: bat
     - plugin: direnv
+    - plugin: delta
 
 - shell:
     - ${ASDF_DIR:-${HOME}.asdf}/bin/asdf install

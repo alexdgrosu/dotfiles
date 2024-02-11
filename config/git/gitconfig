@@ -1,0 +1,96 @@
+[include]
+    # gitconfig only supports ~ expansion, not $HOME
+    path = "~/.config/git/themes.gitconfig"
+
+# This is Git's per-user configuration file.
+[user]
+    # Please adapt and uncomment the following lines:
+    name = Alexandru D. Grosu
+    email = alexandru.d.grosu@gmail.com
+
+[alias]
+    # Execs
+    exec     = ! "exec"
+    fza      = ! "git ls-files -m --exclude-standard | fzf --preview-window='66%' --preview='git diff {} | delta' --print0 -m | xargs -0 -t -o git add"
+    fzn      = ! "git ls-files -o --exclude-standard | fzf --preview-window='66%' --preview='git diff /dev/null {} | delta' --print0 -m | xargs -0 -t -o git add"
+    
+    # Short aliases
+    aa       = add --all
+    am       = commit --ammend
+    amn      = am --no-edit
+    ap       = add --patch
+    apl      = stash apply
+    c        = commit
+    br       = branch -vv
+    bra      = br --all
+    ca       = co
+    cm       = commit --message
+    cni      = clean -i
+    co       = checkout
+	dhs      = dh --stat
+	dhw      = dh --color-words
+    dc       = diff --cached
+    dcs      = dc --stat
+    dcw      = dc --color-words
+    dh       = diff HEAD~
+    di       = diff
+    dis      = di --stat
+    diw      = di --color-words
+    du       = diff @{u}
+    dus      = du --stat
+    duw      = du --color-words
+    f        = fetch --tags --prune
+    fa       = f --all
+    ff       = merge --ff-only
+    grp      = grep -C 1
+    lg       = log -p
+    lp       = ls -n 15
+    ls       = log --graph --format=line
+    lsa      = log --graph --format=line --all
+    nff      = merge --no-ff
+    p        = push
+    pl       = pull
+    plr      = pull --rebase
+    pu       = push -u origin HEAD
+    s        = status --short --branch
+    pop      = stash pop
+    staash   = stash --include-untracked
+    stsh     = stash --keep-index
+
+    # Long aliases
+    clean-all          = clean -fdx
+    alias              = config --get-regexp ^alias
+    push-force         = push --force-with-lease
+    root               = rev-parse --show-toplevel
+    upgrade-submodules = submodule update --init --remote
+    update-submodules  = submodule update --init --recursive
+    versions           = tag --list --sort = version:refname
+
+[pretty]
+    line = "%C(yellow)%h%Cred%d %Creset%s %Cblue[%cn] %Cgreen(%cr)"
+
+[core]
+    editor = code -w
+    pager  = delta
+
+[init]
+    defaultBranch = main
+
+[color]
+    ui = auto
+
+[advice]
+    detachedHead = false
+    addEmptyPathspec = false
+
+[pull]
+    ff = only
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    features = mellow-barbet
+    syntax-theme = base16-256
+    side-by-side = false
+    navigate = true
