@@ -60,6 +60,8 @@
     - asdf_path: "${ASDF_DIR}/asdf.sh"
     - plugin: starship
     - plugin: fzf
+    - plugin: eza
+    - plugin: bat
     - plugin: direnv
 
 - shell:

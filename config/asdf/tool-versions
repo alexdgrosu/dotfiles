@@ -1,3 +1,5 @@
 starship 1.17.1
 fzf 0.46.1
+bat 0.24.0
+eza 0.18.0
 direnv 2.33.0
