@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+# zhs sources .zshrc for each interactive shell session.
+# We use an anonymous function below to scope variables in our dotifles.
+() {
+    # `local` sets the variable scope to this function AND its descendants.
+    # We can effectively use it to create a global context for our dotfiles.
+    # local foo="$ZDOTDIR/.foo"
+
+    # Load all the files in rc.d that start with `<number>.` and end in `.zsh`
+    # <-> matches any non-negative number; <1->, <-9>, <1-9>, etc.
+    # (n) sorts the results numerically.
+    # This effectively ensures we load all scripts in rc.d in order.
+    local file=
+    for file in $ZDOTDIR/rc.d/<->.*.zsh(n); do
+        . $file
+    done
+} "$@"

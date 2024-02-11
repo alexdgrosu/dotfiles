@@ -3,3 +3,15 @@
       create: true
       relink: true
 
+- clean:
+    ~/:
+      force: true
+    ~/.config:
+      force: true
+      recursive: true
+
+- link:
+    ${HOME}/.zshenv:
+
+- link:
+    ${ZDOTDIR}/.zshrc: config/zsh/zshrc
