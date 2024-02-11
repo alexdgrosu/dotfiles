@@ -10,6 +10,14 @@
       force: true
       recursive: true
 
+- create:
+    - ~/sources
+    - ~/temp
+
+- create:
+    ~/.ssh:
+      mode: 0700
+
 - link:
     ${HOME}/.zshenv:
 
