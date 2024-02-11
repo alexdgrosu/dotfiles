@@ -24,6 +24,7 @@
 
 - link:
     ${ZDOTDIR}/.zshrc: config/zsh/zshrc
+    ${ZDOTDIR}/.zsh_plugins.txt: config/zsh/zsh_plugins.txt
     ${ZDOTDIR}:
       glob: true
       path: config/zsh/*.d
@@ -50,10 +51,16 @@
       description: asdf-vm
       method: clone
 
+- git:
+    "~/.config/zsh/.antidote":
+      url: https://github.com/mattmc3/antidote.git
+      method: clone
+
 - asdf:
     - asdf_path: "${ASDF_DIR}/asdf.sh"
     - plugin: starship
     - plugin: fzf
+    - plugin: direnv
 
 - shell:
     - ${ASDF_DIR:-${HOME}.asdf}/bin/asdf install
