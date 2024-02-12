@@ -36,3 +36,9 @@ read_only = " "
 
 [container]
 style = "red bold dimmed"
+
+[os]
+disabled = false
+
+[os.symbols]
+Debian = ""

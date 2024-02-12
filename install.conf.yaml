@@ -73,4 +73,5 @@
     - plugin: delta
 
 - shell:
-    - ${ASDF_DIR:-${HOME}.asdf}/bin/asdf install
+    - command: ${ASDF_DIR:-${HOME}.asdf}/bin/asdf install
+      description: "Installing asdf ~/.tool-versions"
