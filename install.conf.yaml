@@ -22,6 +22,9 @@
     ${HOME}/.zshenv:
     ${HOME}/.gitconfig: config/git/gitconfig
     ${HOME}/.tool-versions: config/asdf/tool-versions
+    ${HOME}/.ssh: 
+      glob: true
+      path: config/ssh/*
 
 - link:
     ${ZDOTDIR}/.zshrc: config/zsh/zshrc
