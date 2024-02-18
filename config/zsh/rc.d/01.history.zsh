@@ -1,10 +1,10 @@
 #!/bin/zsh
 
-### 
-# History options
-#
-# We set these early to preserve history no matter what.
-#
+# ---------------------------------------------------------------------------- #
+#                                    History                                   #
+# ---------------------------------------------------------------------------- #
+# We set all history options early to preserve history no matter what happens.
+
 
 # https://zsh.sourceforge.io/Doc/Release/Expansion.html#Filename-Generation
 setopt EXTENDED_GLOB

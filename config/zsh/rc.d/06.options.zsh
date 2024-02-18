@@ -1,8 +1,10 @@
 #!/bin/zsh
 
-###
+# ---------------------------------------------------------------------------- #
+#                                 Misc. Options                                #
+# ---------------------------------------------------------------------------- #
 # Other shell options. We set them after sourcing plugins to override them.
-#
+
 
 # Treat pasted comments as comments, not code
 setopt INTERACTIVE_COMMENTS

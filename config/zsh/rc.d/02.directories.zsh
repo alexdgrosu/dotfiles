@@ -1,8 +1,9 @@
 #!/bin/zsh
 
-###
-# Named directories
-#
+# ---------------------------------------------------------------------------- #
+#                               Named Directories                              #
+# ---------------------------------------------------------------------------- #
+
 
 # Create shortcuts for common directories.
 # `hash -d <name>=<path>` makes ~<name> a shortcut for <path>.

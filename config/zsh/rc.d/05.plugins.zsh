@@ -1,10 +1,11 @@
 #!/bin/zsh
 
-###
-# Plugin manager
-#
+
+# ---------------------------------------------------------------------------- #
+#                                Plugin Manager                                #
+# ---------------------------------------------------------------------------- #
 # Plugins are configured in /zsh/zsh_plugins.txt
-#
+
 
 autoload -U $XDG_CONFIG_HOME/functions/*
 

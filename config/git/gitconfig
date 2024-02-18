@@ -2,9 +2,7 @@
     # gitconfig only supports ~ expansion, not $HOME
     path = "~/.config/git/themes.gitconfig"
 
-# This is Git's per-user configuration file.
 [user]
-    # Please adapt and uncomment the following lines:
     name = Alexandru D. Grosu
     email = alexandru.d.grosu@gmail.com
 
@@ -65,6 +63,7 @@
     upgrade-submodules = submodule update --init --remote
     update-submodules  = submodule update --init --recursive
     versions           = tag --list --sort = version:refname
+    zip                = ! "zip() { git archive --format zip --prefix=\"${PWD##*/}/\" HEAD -o ${1}; }; zip"
 
 [pretty]
     line = "%C(yellow)%h%Cred%d %Creset%s %Cblue[%cn] %Cgreen(%cr)"
