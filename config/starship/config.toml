@@ -38,7 +38,7 @@ read_only = " "
 style = "red bold dimmed"
 
 [os]
-disabled = false
+disabled = true
 
 [os.symbols]
 Debian = ""

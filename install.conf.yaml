@@ -22,6 +22,7 @@
     ${HOME}/.zshenv:
     ${HOME}/.gitconfig: config/git/gitconfig
     ${HOME}/.tool-versions: config/asdf/tool-versions
+    
     ${HOME}/.ssh: 
       glob: true
       path: config/ssh/*
@@ -35,6 +36,8 @@
     
 - link:
     ${XDG_CONFIG_HOME}/asdf/.asdfrc: config/asdf/asdfrc
+    ${XDG_CONFIG_HOME}/tmux/tmux.conf: config/tmux/tmux.conf
+    
     ${XDG_CONFIG_HOME}/functions:
       glob: true
       path: config/functions/*
@@ -58,19 +61,22 @@
       description: asdf-vm
       method: clone
 
-- git:
     "~/.config/zsh/.antidote":
       url: https://github.com/mattmc3/antidote.git
       method: clone
 
+    "~/.config/tmux/plugins/tpm":
+      url: https://github.com/tmux-plugins/tpm
+      method: clone
+
 - asdf:
     - asdf_path: "${ASDF_DIR}/asdf.sh"
-    - plugin: starship
-    - plugin: fzf
-    - plugin: eza
     - plugin: bat
-    - plugin: direnv
     - plugin: delta
+    - plugin: direnv
+    - plugin: eza
+    - plugin: fzf
+    - plugin: starship
 
 - shell:
     - command: ${ASDF_DIR:-${HOME}.asdf}/bin/asdf install
