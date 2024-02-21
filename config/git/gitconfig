@@ -13,10 +13,11 @@
     fzn      = ! "git ls-files -o --exclude-standard | fzf --preview-window='66%' --preview='git diff /dev/null {} | delta' --print0 -m | xargs -0 -t -o git add"
     
     # Short aliases
-    aa       = add --all
+    a        = add
+    aa       = a --all
     am       = commit --ammend
     amn      = am --no-edit
-    ap       = add --patch
+    ap       = a --patch
     apl      = stash apply
     c        = commit
     br       = branch -vv
@@ -50,6 +51,7 @@
     pl       = pull
     plr      = pull --rebase
     pu       = push -u origin HEAD
+    r        = rebase
     s        = status --short --branch
     pop      = stash pop
     staash   = stash --include-untracked
