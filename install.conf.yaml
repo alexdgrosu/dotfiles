@@ -19,11 +19,11 @@
       mode: 0700
 
 - link:
-    ${HOME}/.zshenv:
-    ${HOME}/.gitconfig: config/git/gitconfig
-    ${HOME}/.tool-versions: config/asdf/tool-versions
+    ~/.zshenv:
+    ~/.gitconfig: config/git/gitconfig
+    ~/.tool-versions: config/asdf/tool-versions
     
-    ${HOME}/.ssh: 
+    ~/.ssh:
       glob: true
       path: config/ssh/*
 
@@ -69,15 +69,9 @@
       url: https://github.com/tmux-plugins/tpm
       method: clone
 
-- asdf:
-    - asdf_path: "${ASDF_DIR}/asdf.sh"
-    - plugin: bat
-    - plugin: delta
-    - plugin: direnv
-    - plugin: eza
-    - plugin: fzf
-    - plugin: starship
-
 - shell:
-    - command: ${ASDF_DIR:-${HOME}.asdf}/bin/asdf install
-      description: "Installing asdf ~/.tool-versions"
+    - command: |
+        . ${ASDF_DIR}/asdf.sh
+        cut -d' ' -f1 ~/.tool-versions | grep "^[^\#]" | xargs -I{} asdf plugin add {}
+        asdf install
+      description: "Using asdft to install tools from ~/.tool-versions"

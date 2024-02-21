@@ -3,7 +3,7 @@
 include .env
 BASE_PACKAGES := ${DEFAULT_SHELL} tmux
 BASE_PACKAGES += sudo locales-all make man
-BASE_PACKAGES += git curl vim zip unzip python3
+BASE_PACKAGES += git curl wget vim zip unzip python3
 export
 
 build_%: 
