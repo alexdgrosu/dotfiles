@@ -1,4 +1,4 @@
-#/bin/zsh
+#!/bin/zsh
 
 if [[  -f "/.dockerenv" ]]; then
     ~dot/install -q

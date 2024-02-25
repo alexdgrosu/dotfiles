@@ -1,12 +1,15 @@
-agkozak/zsh-z
+mattmc3/zephyr                              path:plugins/completion
+
+$ASDF_DIR/completions                       kind:fpath
+$ZDOTDIR/completions.d                      kind:fpath
+$ZDOTDIR/plugins.d                          path:wsl conditional:is_wsl
 zsh-users/zsh-completions
 
-eza-community/eza      path:completions/zsh kind:fpath
-junegunn/fzf           path:shell
-$ASDF_DIR/completions  kind:fpath
-$ZDOTDIR/completions.d kind:fpath
-$ZDOTDIR/plugins.d     path:wsl conditional:is_wsl
-mattmc3/zephyr         path:plugins/completion
+agkozak/zsh-z
+junegunn/fzf                                path:shell
+sharkdp/fd                                  path:contrib/completion kind:fpath
+watchexec/watchexec                         path:completions/zsh
+eza-community/eza                           path:completions/zsh kind:fpath
 
 zsh-users/zsh-autosuggestions
 zdharma-continuum/fast-syntax-highlighting

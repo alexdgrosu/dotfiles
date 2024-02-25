@@ -15,8 +15,8 @@
     # Short aliases
     a        = add
     aa       = a --all
-    am       = commit --ammend
-    amn      = am --no-edit
+    am       = commit --amend
+    amn      = commit --amend --no-edit
     ap       = a --patch
     apl      = stash apply
     c        = commit

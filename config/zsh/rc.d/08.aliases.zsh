@@ -12,9 +12,10 @@ alias   ...='cd ../../'
 alias  ....='cd ../../../'
 alias .....='cd ../../../../'
 
-alias  cp='cp -i'
-alias  mv='mv -i'
-alias pls='sudo $(fc -ln -1)'
+alias     cp='cp -i'
+alias     mv='mv -i'
+alias    pls='sudo $(fc -ln -1)'
+alias python=python3
 
 alias  cat='bat'
 alias  eza='eza --icons --group-directories-first'
