@@ -1,38 +1,25 @@
-format = '''
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$fill$container$all\
 $character
-'''
+"""
 
-right_format = """$all"""
-
-add_newline = true
-
+add_newline = false
 palette = "tokyonight"
 
-[palettes.tokyonight]
-black = "#414868"
-blue = "#7aa2f7"
-cyan = "#7dcfff"
-green = "#73daca"
-purple = "#bb9af7"
-red = "#f7768e"
-white = "#c0caf5"
-yellow = "#e0af68"
-bright-black = "#414868"
-bright-blue = "#7aa2f7"
-bright-cyan = "#7dcfff"
-bright-green = "#73daca"
-bright-purple = "#bb9af7"
-bright-red = "#f7768e"
-bright-white = "#c0caf5"
-bright-yellow = "#e0af68"
+[fill]
+symbol = ' '
 
 [character]
-success_symbol = "[❯](bold black)[❯](bold white)"
-error_symbol = "[❯](bold red)[❯](bold white)"
+success_symbol = "[❯](bold black)[❯](bold bright-white)"
+error_symbol = "[❯](bold red)[❯](bold bright-white)"
 
 [directory]
 style = "bold blue"
 read_only = " "
+truncation_length = 2
+fish_style_pwd_dir_length = 1
 
 [container]
 style = "red bold dimmed"
@@ -40,5 +27,20 @@ style = "red bold dimmed"
 [os]
 disabled = true
 
-[os.symbols]
-Debian = ""
+[palettes.tokyonight]
+black = "#32344a"
+blue = "#7aa2f7"
+cyan = "#449dab"
+green = "#9ece6a"
+purple = "#ad8ee6"
+red = "#f7768e"
+white = "#787c99"
+yellow = "#e0af68"
+bright-black = "#444b6a"
+bright-blue = "#7da6ff"
+bright-cyan = "#0db9d7"
+bright-green = "#b9f27c"
+bright-purple = "#bb9af7"
+bright-red = "#ff7a93"
+bright-white = "#acb0d0"
+bright-yellow = "#ff9e64"

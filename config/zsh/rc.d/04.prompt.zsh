@@ -8,12 +8,14 @@ setopt PROMPT_SUBST
 unsetopt BEEP
 unsetopt CORRECT
 
+export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 # Configure fzf (history, file completion)
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS"
-  --color=prompt:#414868,pointer:#c0caf5,marker:#c0caf5,spinner:#c0caf5,header:#414868
-  --border='rounded' --border-label=''
-  --prompt='❯❯ ' --marker='✱' --pointer='❯❯' --separator='─' --scrollbar='│'
-  --info='right' --layout=reverse
+  --color=prompt:#32344a,pointer:#787c99,marker:#acb0d0,spinner:#acb0d0,header:#414868
+  --border='sharp' --layout=reverse
+  --prompt='❯❯ ' --marker='✱' --pointer='❯'
   --height=99%
   --bind 'ctrl-/:toggle-preview'
   --preview='bat --color=always {}' --preview-window 'down:50%:hidden'"
