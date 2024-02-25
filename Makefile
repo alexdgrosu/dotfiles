@@ -1,9 +1,9 @@
 .DEFAULT_GOAL := run_debian
 
 include .env
-BASE_PACKAGES := ${DEFAULT_SHELL} tmux
-BASE_PACKAGES += sudo locales-all make man
-BASE_PACKAGES += git curl wget vim zip unzip python3
+BASE_PACKAGES := ${DEFAULT_SHELL} vim tmux
+BASE_PACKAGES += sudo locales-all man zip unzip xz-utils
+BASE_PACKAGES += git wget curl make python3 python3-venv
 export
 
 build_%: 
