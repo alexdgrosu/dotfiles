@@ -7,3 +7,4 @@ eza 0.18.0
 fd 9.0.0
 fzf 0.46.1
 starship 1.17.1
+watchexec 1.25.1
