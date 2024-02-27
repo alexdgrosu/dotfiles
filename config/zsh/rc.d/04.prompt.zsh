@@ -18,10 +18,9 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS"
   --prompt='❯❯ ' --marker='✱' --pointer='❯'
   --height=99%
   --bind 'ctrl-/:toggle-preview'
-  --preview='bat --color=always {}' --preview-window 'down:50%:hidden'"
+  --preview='bat --color=always {}' --preview-window 'down:75%:hidden'"
 
-export FZF_CTRL_R_OPTS="
-  --preview 'echo {}' --preview-window 'up:3:hidden:wrap'"
+export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window 'up:3:hidden:wrap'"
 
 # Initialize starship (prompt)
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/config.toml"
