@@ -15,7 +15,6 @@
     # Short aliases
     a        = add
     aa       = a --all
-    am       = commit --amend
     amn      = commit --amend --no-edit
     ap       = a --patch
     apl      = stash apply
@@ -58,6 +57,7 @@
     stsh     = stash --keep-index
 
     # Long aliases
+    backup             = ! "backup() { git branch \"bk/$(git rev-parse --abbrev-ref HEAD)\" HEAD; }; backup"
     clean-all          = clean -fdx
     alias              = config --get-regexp ^alias
     push-force         = push --force-with-lease
@@ -98,3 +98,10 @@
 
 [url "ssh://github.com/"]
     pushInsteadOf = https://github.com/
+
+[credential]
+    helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+    credentialStore = cache
+
+[credential "https://dev.azure.com"]
+    useHttpPath = true
