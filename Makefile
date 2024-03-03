@@ -4,6 +4,7 @@ include .env
 BASE_PACKAGES := ${DEFAULT_SHELL} vim tmux
 BASE_PACKAGES += sudo locales-all man zip unzip xz-utils
 BASE_PACKAGES += git wget curl make python3 python3-venv
+BASE_PACKAGES += iputils-ping dnsutils
 export
 
 build_%: 
