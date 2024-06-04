@@ -13,6 +13,8 @@ sharkdp/fd                                  path:contrib/completion kind:fpath
 watchexec/watchexec                         path:completions/zsh
 eza-community/eza                           path:completions/zsh kind:fpath
 ohmyzsh/ohmyzsh                             path:plugins/terraform
+ohmyzsh/ohmyzsh                             path:plugins/dotnet
+ohmyzsh/ohmyzsh                             path:plugins/ripgrep kind:fpath
 
 zsh-users/zsh-autosuggestions
 zdharma-continuum/fast-syntax-highlighting

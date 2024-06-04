@@ -24,6 +24,12 @@ fish_style_pwd_dir_length = 1
 [container]
 style = "red bold dimmed"
 
+[dotnet]
+disabled = false
+
+[azure]
+disabled = false
+
 [os]
 disabled = true
 

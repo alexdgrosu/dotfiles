@@ -37,7 +37,7 @@
     du       = diff @{u}
     dus      = du --stat
     duw      = du --color-words
-    f        = fetch --tags --prune
+    f        = fetch --tags
     fa       = f --all
     ff       = merge --ff-only
     grp      = grep -C 1
@@ -64,7 +64,7 @@
     root               = rev-parse --show-toplevel
     upgrade-submodules = submodule update --init --remote
     update-submodules  = submodule update --init --recursive
-    versions           = tag --list --sort = version:refname
+    versions           = tag --list --sort=version:refname
     zip                = ! "zip() { git archive --format zip --prefix=\"${PWD##*/}/\" HEAD -o ${1}; }; zip"
 
 [pretty]
@@ -86,6 +86,12 @@
 
 [pull]
     ff = only
+
+[fetch]
+    prune = true
+
+[rebase]
+    autosquash = true
 
 [interactive]
     diffFilter = delta --color-only
