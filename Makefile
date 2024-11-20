@@ -1,9 +1,10 @@
 .DEFAULT_GOAL := run_debian
 
 include .env
-BASE_PACKAGES := ${DEFAULT_SHELL} vim tmux sudo locales-all man
-BASE_PACKAGES += zip unzip xz-utils libncurses-dev libbz2-dev libssl-dev libffi-dev libreadline-dev
-BASE_PACKAGES += git wget curl make python3 python3-venv python3-pip
+BASE_PACKAGES := ${DEFAULT_SHELL} sudo man locales-all build-essential xz-utils tk-dev
+BASE_PACKAGES += libssl-dev libbz2-dev libreadline-dev libsqlite3-dev zlib1g-dev
+BASE_PACKAGES += libncursesw5-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+BASE_PACKAGES += procps git curl wget tmux vim zip unzip 
 BASE_PACKAGES += iputils-ping dnsutils httpie
 export
 
