@@ -11,6 +11,3 @@ export VISUAL="vim"
 
 export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
 export ANTIDOTE_DIR="${ZDOTDIR}/.antidote"
-
-export ASDF_DIR="${HOME}/.asdf"
-export ASDF_CONFIG_FILE="${XDG_CONFIG_HOME}/asdf/.asdfrc"

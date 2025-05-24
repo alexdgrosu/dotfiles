@@ -24,4 +24,5 @@ function tm() {
     esac
 }
 
-complete -o nospace -C /home/adg/.asdf/installs/terramate/0.4.3/bin/terramate terramate tm
+# TODO: Fix completion for Terramate
+# complete -o nospace -C /home/adg/.asdf/installs/terramate/0.4.3/bin/terramate terramate tm

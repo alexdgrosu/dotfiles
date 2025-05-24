@@ -21,8 +21,6 @@
 - link:
     ~/.zshenv:
     ~/.gitconfig: config/git/gitconfig
-    ~/.tool-versions: config/asdf/tool-versions
-    ~/.default-python-packages: config/asdf/default-python-packages
     
     ~/.ssh:
       glob: true
@@ -36,8 +34,6 @@
       path: config/zsh/*.d
     
 - link:
-    
-    ${XDG_CONFIG_HOME}/asdf/.asdfrc: config/asdf/asdfrc
     ${XDG_CONFIG_HOME}/tmux/tmux.conf: config/tmux/tmux.conf
     
     ${XDG_CONFIG_HOME}/functions:
@@ -57,12 +53,6 @@
       stderr: true
 
 - git:
-    "~/.asdf":
-      url: https://github.com/asdf-vm/asdf.git
-      branch: v0.14.0
-      description: asdf-vm
-      method: clone
-
     "~/.config/zsh/.antidote":
       url: https://github.com/mattmc3/antidote.git
       method: clone
@@ -72,9 +62,3 @@
       method: clone
 
 - shell:
-    - command: |
-        . ${ASDF_DIR}/asdf.sh
-        cut -d' ' -f1 ~/.tool-versions | grep "^[^\#]" | xargs -I{} asdf plugin add {}
-        asdf install python
-        asdf install
-      description: "Using asdft to install tools from ~/.tool-versions"

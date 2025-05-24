@@ -21,6 +21,3 @@ fpath=(
     $fpath
 )
 
-# We source asdf early to make sure its shims are available in the path
-source "$ASDF_DIR/asdf.sh"
-
