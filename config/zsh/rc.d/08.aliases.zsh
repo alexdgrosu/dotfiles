@@ -23,6 +23,8 @@ alias tree='eza -T'
 alias   ls='eza'
 alias    g='git'
 alias   lz='lazygit'
+alias   fd='fdfind'
+alias  cat='batcat'
 
 alias  zz='z -c'
 alias  zs='cd $(g root)'
@@ -55,7 +57,3 @@ alias  tad='tmux attach -d -t'
 alias tksv='tmux kill-server'
 alias tkss='tmux kill-session -t'
 
-alias  pc='pre-commit run'
-alias pca='pre-commit run --all-files'
-
-alias tms='tm script run'

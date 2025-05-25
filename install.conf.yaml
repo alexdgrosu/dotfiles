@@ -21,7 +21,7 @@
 - link:
     ~/.zshenv:
     ~/.gitconfig: config/git/gitconfig
-    
+
     ~/.ssh:
       glob: true
       path: config/ssh/*
@@ -32,10 +32,10 @@
     ${ZDOTDIR}:
       glob: true
       path: config/zsh/*.d
-    
+
 - link:
     ${XDG_CONFIG_HOME}/tmux/tmux.conf: config/tmux/tmux.conf
-    
+
     ${XDG_CONFIG_HOME}/functions:
       glob: true
       path: config/functions/*
@@ -45,6 +45,9 @@
     ${XDG_CONFIG_HOME}/starship:
       glob: true
       path: config/starship/*
+    ${XDG_CONFIG_HOME}/mise:
+      glob: true
+      path: config/mise/*
 
 - defaults:
     shell:
@@ -62,3 +65,4 @@
       method: clone
 
 - shell:
+    - [~/.local/bin/mise install, Install mise tools]

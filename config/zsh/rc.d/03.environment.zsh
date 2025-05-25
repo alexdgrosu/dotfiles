@@ -13,11 +13,10 @@ export -UT INFOPATH infopath
 # Each value in the array is expanded separately
 path=(
     $path
-    "~/.local/bin"
+    "${HOME}/.local/bin"
 )
 
 fpath=(
     "${XDG_CONFIG_HOME}/functions"
     $fpath
 )
-

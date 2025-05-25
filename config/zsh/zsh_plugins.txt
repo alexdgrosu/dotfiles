@@ -1,19 +1,19 @@
-mattmc3/zephyr                              path:plugins/completion
+mattmc3/zephyr             path:plugins/completion
 
-$ZDOTDIR/completions.d                      kind:fpath
-$ZDOTDIR/plugins.d                          path:wsl conditional:is_wsl
-$ZDOTDIR/plugins.d                          path:terramate
-$ZDOTDIR/plugins.d                          path:az
-zsh-users/zsh-completions
+$ZDOTDIR/completions.d     kind:fpath
+zsh-users/zsh-completions 
 
 agkozak/zsh-z
-junegunn/fzf                                path:shell
-sharkdp/fd                                  path:contrib/completion kind:fpath
-watchexec/watchexec                         path:completions/zsh
-eza-community/eza                           path:completions/zsh kind:fpath
-ohmyzsh/ohmyzsh                             path:plugins/terraform
-ohmyzsh/ohmyzsh                             path:plugins/dotnet
-ohmyzsh/ohmyzsh                             path:plugins/ripgrep kind:fpath
+junegunn/fzf               path:shell
+sharkdp/fd                 path:contrib/completion kind:fpath
+eza-community/eza          path:completions/zsh kind:fpath
+ohmyzsh/ohmyzsh            path:plugins/ripgrep kind:fpath
+
+$ZDOTDIR/plugins.d         path:wsl               conditional:"is_wsl"
+$ZDOTDIR/plugins.d         path:terramate         conditional:"is-callable terramate"
+$ZDOTDIR/plugins.d         path:az                conditional:"is-callable az"
+ohmyzsh/ohmyzsh            path:plugins/terraform conditional:"is-callable terraform"
+ohmyzsh/ohmyzsh            path:plugins/dotnet    conditional:"is-callable dotnet"
 
 zsh-users/zsh-autosuggestions
 zdharma-continuum/fast-syntax-highlighting

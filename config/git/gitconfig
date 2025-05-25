@@ -25,8 +25,8 @@
     cm       = commit --message
     cni      = clean -i
     co       = checkout
-	dhs      = dh --stat
-	dhw      = dh --color-words
+    dhs      = dh --stat
+    dhw      = dh --color-words
     dc       = diff --cached
     dcs      = dc --stat
     dcw      = dc --color-words

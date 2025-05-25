@@ -15,6 +15,3 @@ autoload -z edit-command-line && zle -N edit-command-line
 
 source "$ANTIDOTE_DIR/antidote.zsh"
 antidote load
-
-# Hook direnv so it can automatically load .envrc when cd-ing to a directory.
-eval "$(direnv hook zsh)"
