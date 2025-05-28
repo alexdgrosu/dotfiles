@@ -1,7 +1,7 @@
 [tools]
 azure-cli = "latest"
 dive = "latest"
-dotnet-core = "latest"
+dotnet = "latest"
 jq = "latest"
 k3d = "latest"
 kubectl = "latest"
@@ -9,3 +9,6 @@ mkcert = "latest"
 terraform = "latest"
 usage = "latest"
 yq = "latest"
+
+[settings]
+experimental = true
