@@ -1,14 +1,11 @@
-[tools]
-azure-cli = "latest"
-dive = "latest"
-dotnet = "latest"
-jq = "latest"
-k3d = "latest"
-kubectl = "latest"
-mkcert = "latest"
-terraform = "latest"
-usage = "latest"
-yq = "latest"
-
 [settings]
 experimental = true
+
+[tools]
+"aqua:bat" = "latest"
+"aqua:eza" = "latest"
+"aqua:fd" = "latest"
+"aqua:lazygit" = "latest"
+"aqua:ripgrep" = "latest"
+"aqua:starship" = "latest"
+"aqua:usage" = "latest"

@@ -48,6 +48,9 @@
     ${XDG_CONFIG_HOME}/mise:
       glob: true
       path: config/mise/*
+    ${XDG_CONFIG_HOME}/kitty:
+      glob: true
+      path: config/kitty/*
 
 - defaults:
     shell:
@@ -65,4 +68,4 @@
       method: clone
 
 - shell:
-    - [~/.local/bin/mise install, Install mise tools]
+    - [mise install, Install mise tools]

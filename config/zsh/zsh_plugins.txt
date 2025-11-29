@@ -4,12 +4,11 @@ $ZDOTDIR/completions.d     kind:fpath
 zsh-users/zsh-completions 
 
 agkozak/zsh-z
-junegunn/fzf               path:shell
 sharkdp/fd                 path:contrib/completion kind:fpath
 eza-community/eza          path:completions/zsh kind:fpath
 ohmyzsh/ohmyzsh            path:plugins/ripgrep kind:fpath
 
-$ZDOTDIR/plugins.d         path:wsl               conditional:"is_wsl"
+$ZDOTDIR/plugins.d         path:fzf
 $ZDOTDIR/plugins.d         path:terramate         conditional:"is-callable terramate"
 $ZDOTDIR/plugins.d         path:az                conditional:"is-callable az"
 ohmyzsh/ohmyzsh            path:plugins/terraform conditional:"is-callable terraform"

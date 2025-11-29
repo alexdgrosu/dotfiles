@@ -8,7 +8,7 @@ setopt PROMPT_SUBST
 unsetopt BEEP
 unsetopt CORRECT
 
-export FZF_DEFAULT_COMMAND="fdfind --strip-cwd-prefix --follow"
+export FZF_DEFAULT_COMMAND="fd --strip-cwd-prefix --follow"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type d"
 
@@ -19,7 +19,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS"
   --prompt='❯❯ ' --marker='✱' --pointer='❯'
   --height=99%
   --bind 'ctrl-/:toggle-preview'
-  --preview='batcat --color=always {}' --preview-window 'down:75%:hidden'"
+  --preview='bat --color=always {}' --preview-window 'down:75%:hidden'"
 
 export FZF_CTRL_R_OPTS="
   --preview 'echo {}' --preview-window 'up:3:hidden:wrap'"
@@ -28,7 +28,7 @@ export FZF_ALT_C_OPTS="
   --preview 'eza -T {} | head -200' --preview-window 'down:50%:hidden'"
 
 # Initialize mise (environment management)
-eval "$(~/.local/bin/mise activate zsh)"
+eval "$(mise activate zsh)"
 
 # Initialize starship (prompt)
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/config.toml"
