@@ -4,7 +4,7 @@ $ZDOTDIR/completions.d     kind:fpath
 zsh-users/zsh-completions 
 
 agkozak/zsh-z
-junegunn/fzf               path:shell
+junegunn/fzf               path:shell                         branch:v0.60.0 
 sharkdp/fd                 path:contrib/completion kind:fpath
 eza-community/eza          path:completions/zsh kind:fpath
 ohmyzsh/ohmyzsh            path:plugins/ripgrep kind:fpath

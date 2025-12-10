@@ -1,5 +1,6 @@
 alias c='/mnt/c/WINDOWS/system32/clip.exe'
 alias o='/mnt/c/WINDOWS/explorer.exe .'
+alias wsl='/mnt/c/Program\ Files/WSL/wsl.exe'
 
 path=(
     $path
@@ -8,4 +9,4 @@ path=(
     "${HOME}/.local/bin"
 )
 
-(wsl -d trixie -u root service nix-daemon status 2>&1 >/dev/null ) || wsl -d trixie -u root service nix-daemon start
+(wsl -d debian-store -u root service nix-daemon status 2>&1 >/dev/null ) || wsl -d debian-store -u root service nix-daemon start

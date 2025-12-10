@@ -65,4 +65,4 @@
       method: clone
 
 - shell:
-    - [~/.local/bin/mise install, Install mise tools]
+    - [mise install, Install mise tools]
