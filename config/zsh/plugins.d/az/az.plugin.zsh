@@ -1,6 +1,6 @@
 function az() {
-    if [[ -d "./.azure" ]]; then
-        AZURE_CONFIG_DIR=".azure" command az $@
+    if [[ -d "./.azure.d" ]]; then
+        AZURE_CONFIG_DIR=".azure.d" command az $@
     else
         command az $@
     fi

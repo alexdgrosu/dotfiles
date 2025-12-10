@@ -10,5 +10,5 @@ file=${result%%:*}
 linenumber=$(echo "${result}" | cut -d: -f2)
 
 if [[ -n "$file" ]]; then
-    $EDITOR +"${linenumber}" "$file"
+    code --goto "$file:${linenumber}"
 fi

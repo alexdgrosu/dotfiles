@@ -6,9 +6,12 @@ jq = "latest"
 k3d = "latest"
 kubectl = "latest"
 mkcert = "latest"
+python = "latest"
 terraform = "latest"
+terramate = "latest"
 usage = "latest"
 yq = "latest"
 
 [settings]
 experimental = true
+env_file = ".env"

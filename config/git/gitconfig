@@ -3,8 +3,8 @@
     path = "~/.config/git/themes.gitconfig"
 
 [user]
-    name = Alexandru D. Grosu
-    email = alexandru.d.grosu@gmail.com
+    name = Alexandru Doru Grosu
+    email = adg@vertica.dk
 
 [alias]
     # Execs
@@ -45,6 +45,7 @@
     lp       = ls -n 15
     ls       = log --graph --format=line
     lsa      = log --graph --format=line --all
+    lpr      = log --decorate-refs-exclude=refs/tags --pretty='- [x] %s' main..
     nff      = merge --no-ff
     p        = push
     pl       = pull

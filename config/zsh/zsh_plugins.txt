@@ -10,6 +10,7 @@ eza-community/eza          path:completions/zsh kind:fpath
 ohmyzsh/ohmyzsh            path:plugins/ripgrep kind:fpath
 
 $ZDOTDIR/plugins.d         path:wsl               conditional:"is_wsl"
+$ZDOTDIR/plugins.d         path:flox              conditional:"is-callable flox"
 $ZDOTDIR/plugins.d         path:terramate         conditional:"is-callable terramate"
 $ZDOTDIR/plugins.d         path:az                conditional:"is-callable az"
 ohmyzsh/ohmyzsh            path:plugins/terraform conditional:"is-callable terraform"

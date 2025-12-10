@@ -1,6 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
+$env_var\
 $fill$container$all\
 $character
 """
@@ -18,8 +19,9 @@ error_symbol = "[❯](bold red)[❯](bold bright-white)"
 [directory]
 style = "bold blue"
 read_only = " "
-truncation_length = 2
-fish_style_pwd_dir_length = 1
+truncation_length = 1
+fish_style_pwd_dir_length = 3
+truncate_to_repo = true
 
 [container]
 style = "red bold dimmed"
@@ -50,3 +52,10 @@ bright-purple = "#bb9af7"
 bright-red = "#ff7a93"
 bright-white = "#acb0d0"
 bright-yellow = "#ff9e64"
+
+[env_var.FLOX_PROMPT_ENVIRONMENTS]
+variable = 'FLOX_PROMPT_ENVIRONMENTS'
+default = ''
+symbol = 'λ'
+format = '[($symbol $env_value)]($style)'
+style = 'bright-white bold'
