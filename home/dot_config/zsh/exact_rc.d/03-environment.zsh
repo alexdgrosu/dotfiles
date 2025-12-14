@@ -20,3 +20,6 @@ fpath=(
     "${XDG_CONFIG_HOME}/functions"
     $fpath
 )
+
+# https://mise.jdx.dev/getting-started.html#activate-mise
+eval "$(mise activate zsh)"
