@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := run_debian
 
 include .env
-BASE_PACKAGES := ${DEFAULT_SHELL} sudo git curl wget
+BASE_PACKAGES := sudo locales-all man git curl
 export
 
 build_%:

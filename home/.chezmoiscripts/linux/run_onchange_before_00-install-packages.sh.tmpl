@@ -1,0 +1,36 @@
+{{ if eq .osid "linux-debian" "linux-ubuntu" -}}
+#!/usr/bin/env bash
+
+set -Eeuo pipefail
+
+{{ $packages := list
+"bat"
+"bind9-dnsutils"
+"build-essential"
+"curl"
+"eza"
+"fd-find"
+"fzf"
+"git-delta"
+"git"
+"httpie"
+"iputils-ping"
+"lazygit"
+"libnss3-tools"
+"net-tools"
+"procps"
+"ripgrep"
+"starship"
+"tmux"
+"unzip"
+"vim"
+"wget"
+"xclip"
+"xz-utils"
+"zip"
+"zsh" -}}
+
+sudo apt-get update
+sudo apt-get install -y {{ $packages | join " " }}
+
+{{ end -}}
