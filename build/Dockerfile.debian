@@ -6,7 +6,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y ${BASE_PACKAGES}
 RUN useradd -m -G sudo ${DEFAULT_USER} \
-    && echo "[user]\ndefault=${DEFAULT_USER}" >> /etc/wsl.conf \
-    && echo "${DEFAULT_USER}:${DEFAULT_PASSWORD}" | chpasswd
+  && echo "[user]\ndefault=${DEFAULT_USER}" >> /etc/wsl.conf \
+  && echo "${DEFAULT_USER}:${DEFAULT_PASSWORD}" | chpasswd
 
 USER ${DEFAULT_USER}
+WORKDIR /home/${DEFAULT_USER}/.config/local/share/chezmoi

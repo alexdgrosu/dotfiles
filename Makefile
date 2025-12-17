@@ -8,8 +8,8 @@ build_%:
 	docker compose build $*
 
 run_%: build_%
-	docker compose up --detach
-	docker compose exec $* sh -c ~/dotfiles/install.sh
+	docker compose up --detach $*
+	docker compose exec $* sh -c ~/.config/local/share/chezmoi/install.sh
 	docker compose exec $* ${DEFAULT_SHELL}
 
 clean:

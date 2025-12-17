@@ -14,7 +14,7 @@ services:
         DEFAULT_PASSWORD: ${DEFAULT_PASSWORD}
         BASE_PACKAGES: ${BASE_PACKAGES}
     volumes:
-      - ..:/home/${DEFAULT_USER}/dotfiles
+      - ..:/home/${DEFAULT_USER}/.config/local/share/chezmoi
   ubuntu:
     image: ${DOCKER_REPOSITORY}:ubuntu
     tty: true
@@ -30,4 +30,4 @@ services:
         DEFAULT_PASSWORD: ${DEFAULT_PASSWORD}
         BASE_PACKAGES: ${BASE_PACKAGES}
     volumes:
-      - ..:/home/${DEFAULT_USER}/dotfiles
+      - ..:/home/${DEFAULT_USER}/.config/local/share/chezmoi
