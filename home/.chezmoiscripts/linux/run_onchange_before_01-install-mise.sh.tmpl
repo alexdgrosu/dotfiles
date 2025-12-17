@@ -1,8 +1,0 @@
-{{ if eq .osid "linux-debian" "linux-ubuntu" -}}
-#!/usr/bin/env bash
-
-set -Eeuo pipefail
-
-curl https://mise.run | sh
-
-{{ end -}}
