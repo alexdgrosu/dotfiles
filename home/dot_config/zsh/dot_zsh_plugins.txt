@@ -6,6 +6,6 @@ $ZDOTDIR/completions.d                     kind:fpath
 $ZDOTDIR/plugins.d                         path:fzf
 $ZDOTDIR/plugins.d                         path:mise
 
-agkozak/zsh-z
-zsh-users/zsh-autosuggestions
-zdharma-continuum/fast-syntax-highlighting
+agkozak/zsh-z                              kind:defer
+zsh-users/zsh-autosuggestions              kind:defer
+zdharma-continuum/fast-syntax-highlighting kind:defer

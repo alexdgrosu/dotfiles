@@ -10,4 +10,4 @@ RUN useradd -m -G sudo ${DEFAULT_USER} \
   && echo "${DEFAULT_USER}:${DEFAULT_PASSWORD}" | chpasswd
 
 USER ${DEFAULT_USER}
-WORKDIR /home/${DEFAULT_USER}/.config/local/share/chezmoi
+WORKDIR /home/${DEFAULT_USER}/.local/share/chezmoi

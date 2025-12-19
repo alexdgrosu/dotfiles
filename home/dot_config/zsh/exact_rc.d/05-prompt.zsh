@@ -1,5 +1,9 @@
 #!/usr/bin/env zsh
 
+##
+# Prompt configuration and theme.
+#
+
 setopt PROMPT_SUBST
 unsetopt BEEP
 unsetopt CORRECT
@@ -26,6 +30,6 @@ export FZF_ALT_C_OPTS="
 source <(fzf --zsh)
 
 # Initialize starship (prompt)
-export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/starship/config.toml"
-export STARSHIP_CACHE="${XDG_CACHE_HOME}/starship"
+export STARSHIP_CONFIG=${XDG_CONFIG_HOME}/starship/config.toml
+export STARSHIP_CACHE=${XDG_CACHE_HOME}/starship
 eval "$(starship init zsh)"

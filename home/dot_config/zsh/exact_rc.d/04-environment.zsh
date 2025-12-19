@@ -1,8 +1,8 @@
 #!/usr/bin/env zsh
 
-# ---------------------------------------------------------------------------- #
-#                             Environment Variables                            #
-# ---------------------------------------------------------------------------- #
+##
+# Environment variables and environment manager.
+#
 
 bindkey -e
 
@@ -17,7 +17,7 @@ path=(
 )
 
 fpath=(
-    "${XDG_CONFIG_HOME}/functions"
+    ${XDG_CONFIG_HOME}/functions
     $fpath
 )
 
