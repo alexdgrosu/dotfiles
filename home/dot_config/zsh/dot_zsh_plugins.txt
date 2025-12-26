@@ -5,6 +5,7 @@ sharkdp/fd                                 path:contrib/completion kind:fpath br
 $ZDOTDIR/completions.d                     kind:fpath
 $ZDOTDIR/plugins.d                         path:fzf
 $ZDOTDIR/plugins.d                         path:mise
+$ZDOTDIR/plugins.d                         path:chezmoi
 
 agkozak/zsh-z                              kind:defer
 zsh-users/zsh-autosuggestions              kind:defer
