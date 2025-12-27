@@ -1,7 +1,16 @@
-{{ $osid := .chezmoi.os -}}
-{{ if (and (eq .chezmoi.os "linux") (hasKey .chezmoi.osRelease "id")) -}}
-{{   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}
-{{ end -}}
+{{- $osid := .chezmoi.os -}}
+{{- if (and (eq .chezmoi.os "linux") (hasKey .chezmoi.osRelease "id")) -}}
+{{-   $osid = printf "%s-%s" .chezmoi.os .chezmoi.osRelease.id -}}
+{{- end -}}
+
+{{- $iswsl := false -}}
+{{- if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft")) -}}
+{{-   $iswsl = true -}}
+{{- end }}
+
+{{- $email := promptStringOnce . "email" "What is your email address" -}}
 
 [data]
     osid = {{ $osid | quote }}
+    iswsl = {{ $iswsl }}
+    email = {{ $email | quote }}

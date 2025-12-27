@@ -8,8 +8,8 @@ build_%:
 
 run_%: build_%
 	docker compose up --detach $*
-	docker compose exec $* sh -c ~/.local/share/chezmoi/install.sh
-	docker compose exec $* ${DEFAULT_SHELL}
+	docker compose exec --workdir /home/${DEFAULT_USER}/.local/share/chezmoi $* sh -c ./install.sh
+	docker compose exec --workdir /home/${DEFAULT_USER}/.local/share/chezmoi $* ${DEFAULT_SHELL}
 
 clean:
 	docker compose down
