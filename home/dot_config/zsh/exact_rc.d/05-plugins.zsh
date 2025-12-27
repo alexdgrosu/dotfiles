@@ -27,8 +27,8 @@ function install_antidote() {
 }
 
 autoload -U ${XDG_CONFIG_HOME}/functions/*
-autoload -z edit-command-line && zle -N edit-command-line
-autoload -Uz bashcompinit && bashcompinit
+autoload -z edit-command-line; zle -N edit-command-line
+autoload -Uz bashcompinit; bashcompinit
 
 install_tmux_plugins
-install_antidote && source $ANTIDOTE && antidote load
+install_antidote; source $ANTIDOTE; antidote load
