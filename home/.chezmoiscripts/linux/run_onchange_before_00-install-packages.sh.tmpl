@@ -1,4 +1,4 @@
-{{ if eq .osid "linux-debian" "linux-ubuntu" "linux-mint" -}}
+{{ if eq .osid "linux-debian" "linux-ubuntu" "linux-linuxmint" -}}
 #!/usr/bin/env bash
 
 set -Eeuo pipefail
@@ -10,7 +10,6 @@ set -Eeuo pipefail
 "curl"
 "eza"
 "fd-find"
-"fzf"
 "git-delta"
 "git"
 "httpie"
@@ -28,8 +27,8 @@ set -Eeuo pipefail
 "zip"
 "zsh" -}}
 
-{{ if ne .osid "linux-mint" -}}
-{{ $packages = concat $packages (list "lazygit" "starship") -}}
+{{ if ne .osid "linux-linuxmint" -}}
+{{ $packages = concat $packages (list "fzf" "lazygit" "starship") -}}
 {{ end -}}
 
 sudo apt-get update

@@ -8,7 +8,8 @@ curl https://mise.run | MISE_INSTALL_PATH=$mise sh
 
 $mise use --global usage@latest
 
-{{ if eq .osid "linux-mint" -}}
-$mise use --global starship@latest
+{{ if eq .osid "linux-linuxmint" -}}
+$mise use --global fzf@latest
 $mise use --global lazygit@latest
+$mise use --global starship@latest
 {{ end -}}
