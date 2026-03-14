@@ -7,3 +7,8 @@ local mise=${HOME}/.local/bin/mise
 curl https://mise.run | MISE_INSTALL_PATH=$mise sh
 
 $mise use --global usage@latest
+
+{{ if eq .osid "linux-mint" -}}
+$mise use --global starship@latest
+$mise use --global lazygit@latest
+{{ end -}}

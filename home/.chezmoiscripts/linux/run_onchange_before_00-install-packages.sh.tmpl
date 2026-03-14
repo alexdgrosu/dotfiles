@@ -1,4 +1,4 @@
-{{ if eq .osid "linux-debian" "linux-ubuntu" -}}
+{{ if eq .osid "linux-debian" "linux-ubuntu" "linux-mint" -}}
 #!/usr/bin/env bash
 
 set -Eeuo pipefail
@@ -15,12 +15,10 @@ set -Eeuo pipefail
 "git"
 "httpie"
 "iputils-ping"
-"lazygit"
 "libnss3-tools"
 "net-tools"
 "procps"
 "ripgrep"
-"starship"
 "tmux"
 "unzip"
 "vim"
@@ -29,6 +27,10 @@ set -Eeuo pipefail
 "xz-utils"
 "zip"
 "zsh" -}}
+
+{{ if ne .osid "linux-mint" -}}
+{{ $packages = concat $packages (list "lazygit" "starship") -}}
+{{ end -}}
 
 sudo apt-get update
 sudo apt-get install -y {{ $packages | join " " }}
