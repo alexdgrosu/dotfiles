@@ -4,6 +4,5 @@ zsh-users/zsh-completions
 $ZDOTDIR/completions.d                     kind:fpath
 $ZDOTDIR/plugins.d                         path:common
 
-agkozak/zsh-z                              kind:defer
 zsh-users/zsh-autosuggestions              kind:defer
 zdharma-continuum/fast-syntax-highlighting kind:defer
