@@ -1,7 +1,12 @@
-.DEFAULT_GOAL := run_debian
-
 include .env
 export
+
+.PHONY: _default
+_default:
+	$(error Please specify an OS (e.g. 'make debian') or call a target directly (e.g. 'make clean'))
+
+%: run_%
+	@:
 
 build_%:
 	docker compose build $*
